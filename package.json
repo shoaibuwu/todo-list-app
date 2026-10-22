@@ -1,0 +1,12 @@
+{
+  "name": "todo-list-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack Todo application",
+  "scripts": {
+    "start": "node server.js",
+    "backend": "npm --prefix backend run dev",
+    "server": "npm --prefix backend start",
+    "frontend": "npm --prefix frontend run dev"
+  }
+}

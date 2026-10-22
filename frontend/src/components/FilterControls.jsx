@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Search, X, SlidersHorizontal, ArrowUpDown } from 'lucide-react';
+import ExportTasks from './ExportTasks';
 import {
   setSearchQuery,
   setStatusFilter,
@@ -79,6 +80,9 @@ export default function FilterControls() {
               <option value="due_date">Due Date</option>
             </select>
           </div>
+
+          {/* Export Tasks Button & Dropdown */}
+          <ExportTasks />
         </div>
       </div>
 

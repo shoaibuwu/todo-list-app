@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import ThemeToggle from '../components/ThemeToggle';
 import {
   loginUser,
   signupUser,
@@ -225,6 +226,11 @@ export default function AuthPage({ initialMode = 'login' }) {
 
   return (
     <div className="auth-page-container">
+      {/* Top right theme switch */}
+      <div style={{ position: 'absolute', top: '1.25rem', right: '1.5rem', zIndex: 50 }}>
+        <ThemeToggle />
+      </div>
+
       {/* Background radial glows */}
       <div className="auth-bg-glow glow-1"></div>
       <div className="auth-bg-glow glow-2"></div>

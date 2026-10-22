@@ -11,6 +11,7 @@ import TodoItem from '../components/TodoItem';
 import TodoModal from '../components/TodoModal';
 import EmptyState from '../components/EmptyState';
 import IdleWarningModal from '../components/IdleWarningModal';
+import WelcomeBanner from '../components/WelcomeBanner';
 import { AlertCircle, RefreshCw, Loader2 } from 'lucide-react';
 
 export default function DashboardPage() {
@@ -157,6 +158,12 @@ export default function DashboardPage() {
             </div>
           </div>
         )}
+
+        {/* Welcome & Productivity Banner */}
+        <WelcomeBanner
+          onOpenAddModal={handleOpenAddModal}
+          todos={todos}
+        />
 
         {/* Statistics Dashboard */}
         <StatsOverview todos={todos} />
